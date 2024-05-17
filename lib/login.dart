@@ -24,7 +24,7 @@ class _LogInState extends State<LogIn> {
     if (email.isNotEmpty && password.isNotEmpty) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => HomeScreenSmall()),
+        MaterialPageRoute(builder: (context) => Home()),
       );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
