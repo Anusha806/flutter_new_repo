@@ -8,7 +8,7 @@ class SlideItem extends StatefulWidget {
   final String rating;
 
   SlideItem({
-    required Key key,
+    Key? key,
     required this.img,
     required this.title,
     required this.address,

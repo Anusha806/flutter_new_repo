@@ -8,7 +8,7 @@ class TrendingItem extends StatefulWidget {
   final String rating;
 
   TrendingItem({
-    required Key key,
+    Key? key,
     required this.img,
     required this.title,
     required this.address,
@@ -28,8 +28,9 @@ class _TrendingItemState extends State<TrendingItem> {
         height: MediaQuery.of(context).size.height / 2.5,
         width: MediaQuery.of(context).size.width,
         child: Card(
-          shape:
-          RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0),
+          ),
           elevation: 3.0,
           child: Column(
             children: <Widget>[
@@ -44,7 +45,7 @@ class _TrendingItemState extends State<TrendingItem> {
                         topRight: Radius.circular(10),
                       ),
                       child: Image.asset(
-                        "${widget.img}",
+                        widget.img,
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -54,7 +55,8 @@ class _TrendingItemState extends State<TrendingItem> {
                     right: 6.0,
                     child: Card(
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(4.0)),
+                        borderRadius: BorderRadius.circular(4.0),
+                      ),
                       child: Padding(
                         padding: EdgeInsets.all(2.0),
                         child: Row(
@@ -80,7 +82,8 @@ class _TrendingItemState extends State<TrendingItem> {
                     left: 6.0,
                     child: Card(
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(3.0)),
+                        borderRadius: BorderRadius.circular(3.0),
+                      ),
                       child: Padding(
                         padding: EdgeInsets.all(4.0),
                         child: Text(
@@ -102,7 +105,7 @@ class _TrendingItemState extends State<TrendingItem> {
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   child: Text(
-                    "${widget.title}",
+                    widget.title,
                     style: TextStyle(
                       fontSize: 20.0,
                       fontWeight: FontWeight.w800,
@@ -117,7 +120,7 @@ class _TrendingItemState extends State<TrendingItem> {
                 child: Container(
                   width: MediaQuery.of(context).size.width,
                   child: Text(
-                    "${widget.address}",
+                    widget.address,
                     style: TextStyle(
                       fontSize: 12.0,
                       fontWeight: FontWeight.w300,

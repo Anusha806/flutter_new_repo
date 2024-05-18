@@ -224,7 +224,6 @@ import '../util/restaurants.dart';
 import '../widgets/categoryitem.dart';
 import '../widgets/search_card.dart';
 import '../widgets/slide_item.dart';
-import '../widgets/trending_item.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -366,12 +365,12 @@ class Home extends StatelessWidget {
 
           return Padding(
             padding: const EdgeInsets.only(right: 10.0),
-            // child: SlideItem(
-            //   img: restaurant["img"],
-            //   title: restaurant["title"],
-            //   address: restaurant["address"],
-            //   rating: restaurant["rating"],
-            // ),
+            child: SlideItem(
+              img: restaurant["img"],
+              title: restaurant["title"],
+              address: restaurant["address"],
+              rating: restaurant["rating"],
+            ),
           );
         },
       ),
