@@ -218,12 +218,15 @@
 // }
 //
 import 'package:flutter/material.dart';
+import 'package:flutter_application/admin/trending.dart';
 import '../util/categories.dart';
 import '../util/friends.dart';
 import '../util/restaurants.dart';
 import '../widgets/categoryitem.dart';
 import '../widgets/search_card.dart';
 import '../widgets/slide_item.dart';
+import '../widgets/trending_item.dart';
+import 'categories.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -278,7 +281,7 @@ class Home extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (BuildContext context) => Home(),
+                builder: (BuildContext context) => Trending(),
               ),
             );
           },
@@ -310,7 +313,7 @@ class Home extends StatelessWidget {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (BuildContext context) => Home(),
+                builder: (BuildContext context) => Categories(),
               ),
             );
           },
